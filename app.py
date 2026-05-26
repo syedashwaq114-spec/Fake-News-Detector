@@ -23,7 +23,7 @@ x = data["content"]
 y = data["label"]
 
 # Convert text to numbers
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(stop_words='english',max_df=0.7)
 x = vectorizer.fit_transform(x)
 
 # Split dataset
