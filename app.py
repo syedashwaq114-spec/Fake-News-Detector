@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -51,4 +52,5 @@ if st.button("Predict"):
     if result[0] == 1:
         st.success("This is REAL News")
     else:
-        st.error("This is FAKE News")
+        st.success("This is FAKE News")
+
