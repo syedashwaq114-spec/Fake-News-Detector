@@ -15,9 +15,11 @@ true["label"] = 1
 
 # Combine datasets
 data = pd.concat([fake, true])
+data["content"] = data["title"] + " " + data["text"]
+data["content"] = data["content"].str.lower() 
 
 # Input and output
-x = data["text"]
+x = data["content"]
 y = data["label"]
 
 # Convert text to numbers
@@ -30,7 +32,7 @@ x_train, x_test, y_train, y_test = train_test_split(
 )
 
 # Train model
-model = PassiveAggressiveClassifier(max_iter=50)
+model = PassiveAggressiveClassifier(max_iter=1000)
 model.fit(x_train, y_train)
 
 # Accuracy
