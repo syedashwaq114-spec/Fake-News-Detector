@@ -52,5 +52,5 @@ if st.button("Predict"):
     if result[0] == 1:
         st.success("This is REAL News")
     else:
-        st.success("This is FAKE News")
+        st.error("This is FAKE News")
 
